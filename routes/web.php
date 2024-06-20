@@ -14,6 +14,10 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', [PagesController::class, 'getIndex']);
-Route::get('/about', [PagesController::class, 'getAbout']);
-Route::get('/contact', [PagesController::class, 'getContact']);
+Route::group(['middleware' => ['web']], function () {
+
+    Route::resource('posts', 'App\Http\Controllers\PostController');
+    Route::get('/', [PagesController::class, 'getIndex']);
+    Route::get('/about', [PagesController::class, 'getAbout']);
+    Route::get('/contact', [PagesController::class, 'getContact']);
+});
