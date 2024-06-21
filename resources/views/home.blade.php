@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
-                    <h1>Welcome to Intake Blog</h1>
-                    <p class="lead">Thank you for visiting. This is our Laravel powered blog site.</p>
+                    <h1>Welcome to my Intake Blog</h1>
+                    <p class="lead">Thank you for visiting. This is my Laravel powered blog site.</p>
                     <p><a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a></p>
                 </div>
             </div>
