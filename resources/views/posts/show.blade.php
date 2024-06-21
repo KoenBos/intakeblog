@@ -34,6 +34,9 @@
                             <input type="hidden" name="_token" value="{{ Session::token() }}">
                         </form>
                     </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        <a href="{{ route('posts.index') }}" class="btn btn-default btn-block"><< See All Posts</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Post;
 
 class PagesController extends Controller
 {
@@ -8,7 +9,8 @@ class PagesController extends Controller
 
     public function getIndex()
     {
-        return view('home');
+        $posts = Post::orderBy('created_at', 'desc')->limit(4)->get();
+        return view('home')->withPosts($posts);
     }
     public function getabout()
     {
