@@ -7,6 +7,9 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
+<!-- styles.css -->
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
 @yield('stylesheets')
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
