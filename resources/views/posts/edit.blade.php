@@ -12,6 +12,9 @@
             <label name="title">Title:</label>
             <input id="title" name="title" class="form-control" maxlength='255' required value="{{ $post->title }}">
 
+            <label name="slug" class="form-spacing-top">Slug:</label>
+            <input id="slug" name="slug" class="form-control" maxlength='255' minlength='5' required value="{{ $post->slug }}">
+
             <label name="body" class="form-spacing-top">Message:</label>
             <textarea id="body" name="body" rows="10" class="form-control" required>{{ $post->body }}</textarea>
         </div>

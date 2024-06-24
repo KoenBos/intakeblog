@@ -16,6 +16,10 @@
                     <input id="title" name="title" class="form-control" maxlength='255' required>
                 </div>
                 <div class="form-group">
+                    <label name="slug">Slug:</label>
+                    <input id="slug" name="slug" class="form-control" maxlength='255' minlength='5' required>
+                </div>
+                <div class="form-group">
                     <label name="body">Message:</label>
                     <textarea id="body" name="body" rows="10" class="form-control" required></textarea>
                 </div>
