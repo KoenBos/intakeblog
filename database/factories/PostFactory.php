@@ -20,6 +20,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(2),
+            'slug' => $this->faker->unique()->slug(3),
             'body' => $this->faker->sentence(20),
         ];
     }

@@ -15,7 +15,7 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::group(['middleware' => ['web']], function () {
-
+    Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'App\Http\Controllers\BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
     Route::resource('posts', 'App\Http\Controllers\PostController');
     Route::get('/', [PagesController::class, 'getIndex']);
     Route::get('/about', [PagesController::class, 'getAbout']);
