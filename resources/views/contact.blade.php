@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <h1>Contact me</h1>
                 <hr>
-                <from>
+                <form>
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input id="email" name="email" class="form-control">

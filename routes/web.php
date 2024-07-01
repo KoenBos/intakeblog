@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +13,14 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'App\Http\Controllers\BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
-    Route::get('/blog', [BlogController::class, 'getIndex']);
-    Route::resource('posts', 'App\Http\Controllers\PostController');
-    Route::get('/', [PagesController::class, 'getIndex']);
-    Route::get('/about', [PagesController::class, 'getAbout']);
-    Route::get('/contact', [PagesController::class, 'getContact']);
-});
+Route::view('/', 'welcome');
+
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+require __DIR__.'/auth.php';
